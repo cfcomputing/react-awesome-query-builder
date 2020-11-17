@@ -54,7 +54,7 @@ const typeMap = {
 };
 
 
-class Item extends PureComponent {
+export class Item extends PureComponent {
   static propTypes = {
     //tree: PropTypes.instanceOf(Immutable.Map).isRequired,
     config: PropTypes.object.isRequired,
@@ -77,5 +77,3 @@ class Item extends PureComponent {
     return Cmp(props);
   }
 }
-
-export default Item;

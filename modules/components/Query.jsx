@@ -22,7 +22,7 @@ const validateAndFixTree = (newTree, _oldTree, newConfig, oldConfig) => {
 };
 
 
-class Query extends PureComponent {
+class _Query extends PureComponent {
     static propTypes = {
       config: PropTypes.object.isRequired,
       onChange: PropTypes.func,
@@ -90,11 +90,11 @@ const ConnectedQuery = connect(
       __isInternalValueChange: state.__isInternalValueChange,
     };
   },
-)(Query);
+)(_Query);
 ConnectedQuery.displayName = "ConnectedQuery";
 
 
-export default class QueryContainer extends Component {
+export class Query extends Component {
     static propTypes = {
       //config
       conjunctions: PropTypes.object.isRequired,

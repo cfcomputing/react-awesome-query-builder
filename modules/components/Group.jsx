@@ -25,7 +25,7 @@ const ConfirmFn = (Cmp) => (
 );
 
 
-export class Group extends PureComponent {
+class _Group extends PureComponent {
   static propTypes = {
     //tree: PropTypes.instanceOf(Immutable.Map).isRequired,
     reordableNodesCnt: PropTypes.number,
@@ -290,4 +290,4 @@ export class Group extends PureComponent {
   }
 }
 
-export default GroupContainer(Draggable("group")(ConfirmFn(Group)));
+export const Group = GroupContainer(Draggable("group")(ConfirmFn(_Group)));
